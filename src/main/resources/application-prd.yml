@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+      # Adicione o driver class name para garantir a correta identificação
+      driver-class-name: org.postgresql.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+      properties:
+        hibernate:
+        # Informe o dialeto correto para PostgreSQL
+        dialect: org.hibernate.dialect.PostgreSQLDialect
